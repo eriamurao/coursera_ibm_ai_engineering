@@ -8,8 +8,8 @@ The program includes **13 courses** in total.
 
 | # | Course | Status |
 |---|--------|--------|
-| 1 | Machine Learning with Python | In progress (~9% complete; est. completion Aug 19, 2026) |
-| 2 | Introduction to Deep Learning & Neural Networks with Keras | Not started |
+| 1 | Machine Learning with Python | In progress (~50% complete) |
+| 2 | Introduction to Deep Learning & Neural Networks with Keras | Completed (100%) |
 | 3 | Deep Learning with Keras and Tensorflow | Not started |
 | 4 | Introduction to Neural Networks and PyTorch | Not started |
 | 5 | Deep Learning with PyTorch | Not started |
@@ -24,4 +24,4 @@ The program includes **13 courses** in total.
 
 ## Repository layout
 
-Course work and notes will be organized here as I progress through the specialization.
+Course work will be organized here as I progress through the specialization.
