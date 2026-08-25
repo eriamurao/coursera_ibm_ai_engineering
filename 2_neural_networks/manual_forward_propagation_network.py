@@ -22,7 +22,7 @@ def initialize_network(num_inputs, num_hidden_layers, num_nodes_hidden, num_node
             node_name = 'node_{}'.format(node + 1)
 
             network[layer_name][node_name] = {
-                'weights': np.around(np.random.uniform(size=(num_nodes_previous,1)), decimals=2),
+                'weights': np.around(np.random.uniform(size=(num_nodes_previous, 1)), decimals=2),
                 'bias': np.around(np.random.uniform(size=(1,1)), decimals=2)
             }
 
@@ -47,16 +47,15 @@ network = initialize_network(num_inputs, num_hidden_layers, num_nodes_hidden, nu
 print(network)
 
 def compute_weighted_sum(inputs, weights, bias):
-    return np.dot(weights, inputs) + bias
+    return np.dot(inputs, weights) + bias
 
 def compute_node_activation(weighted_sum):
     return 1.0 / (1.0 + np.exp(-weighted_sum))
 
 # generate random inputs
 np.random.seed(12)
-inputs = np.around(np.random.uniform(size=(5,1)), decimals=2)
+inputs = np.around(np.random.uniform(size=(1,5)), decimals=2)
 print(f"The inputs of the network are {inputs}")
-
 print(network.keys())
 
 def forward_propagate(network, inputs):
@@ -68,7 +67,7 @@ def forward_propagate(network, inputs):
         for node in layer_data:
             node_data = layer_data[node]
 
-            node_weights = np.transpose(node_data['weights'])
+            node_weights = node_data['weights']
             node_bias = node_data['bias']
 
             z = compute_weighted_sum(layer_inputs, node_weights, node_bias)

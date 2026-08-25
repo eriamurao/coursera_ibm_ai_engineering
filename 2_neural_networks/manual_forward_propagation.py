@@ -6,14 +6,19 @@ import numpy as np
 # network has 2 inputs, 2 hidden layers with 2 nodes each and 1 output
 # Input       Layer 1        Layer 2        Output
 
-# x₁ ──────┐
-#          ├──→ a₁₁ ──────┐
-# x₂ ──────┘              ├──→ a₁₂ ───────┐
-#          ┌──→ a₂₁ ──────┘               │
-#          │                              ├──→ a₁₃
-#          └────────────────→ a₂₂ ────────┘
+# x₁ = 0.53 ──────┐
+#                 │──→ [Hidden Node 1] ──→ a₁
+# x₂ = 0.81 ──────┘
 
-# inputs
+# x₁ = 0.53 ──────┐
+#                 │──→ [Hidden Node 2] ──→ a₂
+# x₂ = 0.81 ──────┘
+
+# a₁ ─────────────┐
+#                 ├──→ [Output Node] ──→ a₃
+# a₂ ─────────────┘
+
+# features inputs
 x_1 = 0.53
 x_2 = 0.81
 
